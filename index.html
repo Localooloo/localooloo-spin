@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin the Wheel - Localooloo AI</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #ff6a00;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎁 Spin the Wheel!</h1>
+  <p>Tap the button below to see what treat you've won today:</p>
+
+  <button onclick="spinPrize()">🎉 Spin Now</button>
+  <p id="result"></p>
+
+  <script>
+    function spinPrize() {
+      const prizes = [
+        "🥤 Free glass of juice!",
+        "🍞 Free garlic bread!",
+        "☕ 50p off your coffee",
+        "🍽️ £1 off any lunch meal",
+        "🍪 Free biscuit with any drink",
+        "😅 Better luck next time!",
+        "🎉 10% off your total bill",
+        "🥳 Surprise treat today – ask inside!"
+      ];
+      const randomIndex = Math.floor(Math.random() * prizes.length);
+      document.getElementById("result").innerText = prizes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
